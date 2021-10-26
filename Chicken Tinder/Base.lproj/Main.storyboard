@@ -42,6 +42,9 @@
                                                 <rect key="frame" x="0.0" y="146.5" width="250" height="43.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Set Location"/>
+                                                <connections>
+                                                    <action selector="buttonSetLocation_clicked:" destination="vTL-oj-jcQ" eventType="touchUpInside" id="2AE-sa-MaJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -67,6 +70,9 @@
                                             </stackView>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-Fd-NlG">
                                                 <rect key="frame" x="-2" y="30" width="254" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderDistance_changed:" destination="vTL-oj-jcQ" eventType="valueChanged" id="gZJ-b8-kRW"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -85,6 +91,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Session" id="69i-QV-hSS"/>
+                    <connections>
+                        <outlet property="buttonSetLocation" destination="rjD-Ut-tb3" id="Urs-wk-Ity"/>
+                        <outlet property="inputLatitude" destination="u4X-o4-VLc" id="m5B-yc-IuR"/>
+                        <outlet property="inputLongitude" destination="3TJ-16-ETP" id="mqs-48-xP5"/>
+                        <outlet property="labelDistance" destination="Drk-EJ-x4n" id="NZI-7E-W8V"/>
+                        <outlet property="sliderDistance" destination="GaE-Fd-NlG" id="WkR-xL-tVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTY-9p-0Jl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +183,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CX-aL-a9q">
                                                 <rect key="frame" x="125" y="0.0" width="125" height="46.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                                <connections>
+                                                    <action selector="buttonLogin_clicked:" destination="db0-Sq-rAi" eventType="touchUpInside" id="iYE-fs-Wir"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -195,6 +211,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="5Jr-a6-lqF"/>
+                    <connections>
+                        <outlet property="buttonLogin" destination="2CX-aL-a9q" id="UoO-BX-LzO"/>
+                        <outlet property="indicatorActivity" destination="OR3-QV-zK1" id="gwt-9U-4YA"/>
+                        <outlet property="inputPassword" destination="VJo-a7-lg8" id="2ZE-dK-EbE"/>
+                        <outlet property="inputUsername" destination="Jh1-qU-R3S" id="IAG-mP-yja"/>
+                        <outlet property="labelErrorMessage" destination="gTc-z9-Ruw" id="TjM-v1-0j7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w59-G9-xan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,7 +272,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-5F-eep">
                                                 <rect key="frame" x="125" y="0.0" width="125" height="50"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Join"/>
+                                                <connections>
+                                                    <action selector="buttonJoin_clicked:" destination="LMe-Kb-Rwk" eventType="touchUpInside" id="O0G-Au-DAh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -274,6 +300,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Join Session" id="t2S-U8-QxN"/>
+                    <connections>
+                        <outlet property="buttonJoin" destination="rc7-5F-eep" id="Npw-J7-oaH"/>
+                        <outlet property="indicatorActivity" destination="VnC-hf-pjQ" id="DFr-L7-MDm"/>
+                        <outlet property="inputSessionCode" destination="DvF-4o-m54" id="BBM-fy-a2c"/>
+                        <outlet property="labelErrorMessage" destination="LJf-6L-Dkc" id="y1l-K3-yHa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzL-vs-RhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
