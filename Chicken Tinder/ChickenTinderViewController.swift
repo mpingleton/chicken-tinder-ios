@@ -13,4 +13,16 @@ class ChickenTinderViewController: UIViewController {
         
     }
     
+    @IBAction func loginBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "segueToLogin", sender: self)
+    }
+    
+    @IBAction func createBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "segueToCreateSession", sender: self)
+    }
+    
+    @IBAction func joinBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "segueToJoinSession", sender: self)
+    }
+    
 }
