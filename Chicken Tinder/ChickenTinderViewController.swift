@@ -13,6 +13,18 @@ class ChickenTinderViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueToLogin") {
+            
+        }
+        else if(segue.identifier == "segueToCreateSession") {
+            
+        }
+        else if(segue.identifier == "segueToJoinSession") {
+            
+        }
+    }
+    
     @IBAction func loginBtnClicked(_ sender: Any) {
         performSegue(withIdentifier: "segueToLogin", sender: self)
     }
