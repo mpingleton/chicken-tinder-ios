@@ -11,7 +11,7 @@
         <!--Create Session-->
         <scene sceneID="36r-WP-4rV">
             <objects>
-                <viewController title="Create Session" id="vTL-oj-jcQ" sceneMemberID="viewController">
+                <viewController title="Create Session" id="vTL-oj-jcQ" customClass="CreateSessionViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5aG-5q-i2R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
         <!--Chicken Tinder-->
         <scene sceneID="gHZ-ss-c31">
             <objects>
-                <viewController title="Chicken Tinder" id="yPD-xz-04C" sceneMemberID="viewController">
+                <viewController title="Chicken Tinder" id="yPD-xz-04C" customClass="ChickenTinderViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1U-Mv-Eej">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
         <!--Login-->
         <scene sceneID="3Mv-ZJ-49y">
             <objects>
-                <viewController title="Login" id="db0-Sq-rAi" sceneMemberID="viewController">
+                <viewController title="Login" id="db0-Sq-rAi" customClass="LoginViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pyl-o9-JjH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
         <!--Join Session-->
         <scene sceneID="LUm-GT-Kgi">
             <objects>
-                <viewController title="Join Session" id="LMe-Kb-Rwk" sceneMemberID="viewController">
+                <viewController title="Join Session" id="LMe-Kb-Rwk" customClass="JoinSessionViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YOx-E0-ghc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

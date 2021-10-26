@@ -12,6 +12,10 @@
 		0B3A1C872728579700195BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3A1C852728579700195BF5 /* Main.storyboard */; };
 		0B3A1C892728579900195BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3A1C882728579900195BF5 /* Assets.xcassets */; };
 		0B3A1C8C2728579900195BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3A1C8A2728579900195BF5 /* LaunchScreen.storyboard */; };
+		0B3A1C9427286CFA00195BF5 /* ChickenTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9327286CFA00195BF5 /* ChickenTinderViewController.swift */; };
+		0B3A1C9627286D1500195BF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9527286D1500195BF5 /* LoginViewController.swift */; };
+		0B3A1C9827286D3F00195BF5 /* CreateSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9727286D3F00195BF5 /* CreateSessionViewController.swift */; };
+		0B3A1C9A27286D5600195BF5 /* JoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9927286D5600195BF5 /* JoinSessionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		0B3A1C882728579900195BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B3A1C8B2728579900195BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B3A1C8D2728579900195BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3A1C9327286CFA00195BF5 /* ChickenTinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenTinderViewController.swift; sourceTree = "<group>"; };
+		0B3A1C9527286D1500195BF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0B3A1C9727286D3F00195BF5 /* CreateSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionViewController.swift; sourceTree = "<group>"; };
+		0B3A1C9927286D5600195BF5 /* JoinSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				0B3A1C882728579900195BF5 /* Assets.xcassets */,
 				0B3A1C8A2728579900195BF5 /* LaunchScreen.storyboard */,
 				0B3A1C8D2728579900195BF5 /* Info.plist */,
+				0B3A1C9327286CFA00195BF5 /* ChickenTinderViewController.swift */,
+				0B3A1C9527286D1500195BF5 /* LoginViewController.swift */,
+				0B3A1C9727286D3F00195BF5 /* CreateSessionViewController.swift */,
+				0B3A1C9927286D5600195BF5 /* JoinSessionViewController.swift */,
 			);
 			path = "Chicken Tinder";
 			sourceTree = "<group>";
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3A1C9627286D1500195BF5 /* LoginViewController.swift in Sources */,
+				0B3A1C9427286CFA00195BF5 /* ChickenTinderViewController.swift in Sources */,
 				0B3A1C802728579700195BF5 /* AppDelegate.swift in Sources */,
+				0B3A1C9A27286D5600195BF5 /* JoinSessionViewController.swift in Sources */,
 				0B3A1C822728579700195BF5 /* SceneDelegate.swift in Sources */,
+				0B3A1C9827286D3F00195BF5 /* CreateSessionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
