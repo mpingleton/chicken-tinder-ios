@@ -9,10 +9,13 @@ import UIKit
 
 class CreateSessionViewController: UIViewController {
     
+    // Delegates.
+    var delegate: CreateSessionDelegate!
+    
+    // User interface outlets.
     @IBOutlet weak var inputLatitude: UITextField!
     @IBOutlet weak var inputLongitude: UITextField!
     @IBOutlet weak var buttonSetLocation: UIButton!
-    
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var sliderDistance: UISlider!
     

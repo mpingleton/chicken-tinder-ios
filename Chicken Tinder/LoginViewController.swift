@@ -9,6 +9,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // Delegates
+    var delegate: LoginDelegate!
+    
+    // User interface outlets.
     @IBOutlet weak var inputUsername: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
     @IBOutlet weak var buttonLogin: UIButton!

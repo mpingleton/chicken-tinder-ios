@@ -16,6 +16,9 @@
 		0B3A1C9627286D1500195BF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9527286D1500195BF5 /* LoginViewController.swift */; };
 		0B3A1C9827286D3F00195BF5 /* CreateSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9727286D3F00195BF5 /* CreateSessionViewController.swift */; };
 		0B3A1C9A27286D5600195BF5 /* JoinSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9927286D5600195BF5 /* JoinSessionViewController.swift */; };
+		0B9EF75E2734BB5F001C7EAA /* JoinSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EF75D2734BB5F001C7EAA /* JoinSessionDelegate.swift */; };
+		0B9EF7602734BBF3001C7EAA /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */; };
+		0B9EF7622734BF90001C7EAA /* CreateSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EF7612734BF90001C7EAA /* CreateSessionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		0B3A1C9527286D1500195BF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B3A1C9727286D3F00195BF5 /* CreateSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionViewController.swift; sourceTree = "<group>"; };
 		0B3A1C9927286D5600195BF5 /* JoinSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSessionViewController.swift; sourceTree = "<group>"; };
+		0B9EF75D2734BB5F001C7EAA /* JoinSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSessionDelegate.swift; sourceTree = "<group>"; };
+		0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
+		0B9EF7612734BF90001C7EAA /* CreateSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				0B3A1C9527286D1500195BF5 /* LoginViewController.swift */,
 				0B3A1C9727286D3F00195BF5 /* CreateSessionViewController.swift */,
 				0B3A1C9927286D5600195BF5 /* JoinSessionViewController.swift */,
+				0B9EF75D2734BB5F001C7EAA /* JoinSessionDelegate.swift */,
+				0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */,
+				0B9EF7612734BF90001C7EAA /* CreateSessionDelegate.swift */,
 			);
 			path = "Chicken Tinder";
 			sourceTree = "<group>";
@@ -149,8 +158,11 @@
 			files = (
 				0B3A1C9627286D1500195BF5 /* LoginViewController.swift in Sources */,
 				0B3A1C9427286CFA00195BF5 /* ChickenTinderViewController.swift in Sources */,
+				0B9EF7602734BBF3001C7EAA /* LoginDelegate.swift in Sources */,
+				0B9EF75E2734BB5F001C7EAA /* JoinSessionDelegate.swift in Sources */,
 				0B3A1C802728579700195BF5 /* AppDelegate.swift in Sources */,
 				0B3A1C9A27286D5600195BF5 /* JoinSessionViewController.swift in Sources */,
+				0B9EF7622734BF90001C7EAA /* CreateSessionDelegate.swift in Sources */,
 				0B3A1C822728579700195BF5 /* SceneDelegate.swift in Sources */,
 				0B3A1C9827286D3F00195BF5 /* CreateSessionViewController.swift in Sources */,
 			);

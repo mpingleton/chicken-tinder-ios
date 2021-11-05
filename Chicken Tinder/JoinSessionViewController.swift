@@ -9,6 +9,10 @@ import UIKit
 
 class JoinSessionViewController: UIViewController {
     
+    // Delegates
+    var delegate: JoinSessionDelegate!
+    
+    // User interface outlets.
     @IBOutlet weak var inputSessionCode: UITextField!
     @IBOutlet weak var buttonJoin: UIButton!
     @IBOutlet weak var indicatorActivity: UIActivityIndicatorView!

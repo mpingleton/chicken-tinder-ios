@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChickenTinderViewController: UIViewController {
+class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionDelegate, CreateSessionDelegate {
     
     override func viewDidLoad() {
         
