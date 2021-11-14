@@ -15,13 +15,16 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "segueToLogin") {
-            
+            let dest = segue.destination as! LoginViewController
+            dest.delegate = self
         }
         else if(segue.identifier == "segueToCreateSession") {
-            
+            let dest = segue.destination as! CreateSessionViewController
+            dest.delegate = self
         }
         else if(segue.identifier == "segueToJoinSession") {
-            
+            let dest = segue.destination as! JoinSessionViewController
+            dest.delegate = self
         }
     }
     
