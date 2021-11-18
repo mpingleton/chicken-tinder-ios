@@ -9,6 +9,12 @@ import UIKit
 
 class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionDelegate, CreateSessionDelegate {
     
+    @IBOutlet weak var imageRestaurant: UIImageView!
+    @IBOutlet weak var labelRestaurantName: UILabel!
+    @IBOutlet weak var labelRestaurantLocation: UILabel!
+    @IBOutlet weak var buttonPass: UIButton!
+    @IBOutlet weak var buttonLike: UIButton!
+    
     override func viewDidLoad() {
         
     }
@@ -26,6 +32,12 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionD
             let dest = segue.destination as! JoinSessionViewController
             dest.delegate = self
         }
+    }
+    
+    @IBAction func buttonPass_clicked(_ sender: Any) {
+    }
+    
+    @IBAction func buttonLike_clicked(_ sender: Any) {
     }
     
 }
