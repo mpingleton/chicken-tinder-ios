@@ -142,11 +142,11 @@
                                         <rect key="frame" x="0.0" y="8.3333333333333144" width="388" height="737.66666666666663"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="c01-GF-MXg">
-                                        <rect key="frame" x="8" y="638" width="372" height="100"/>
+                                        <rect key="frame" x="0.0" y="646" width="388" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-pY-cvj">
-                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -157,6 +157,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Hf5-Tv-FPU"/>
                                         </constraints>
@@ -165,11 +166,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="8cZ-pL-QpN" firstAttribute="top" secondItem="AvF-IL-hfr" secondAttribute="top" constant="8" id="4o3-mx-NLX"/>
-                                    <constraint firstAttribute="bottom" secondItem="c01-GF-MXg" secondAttribute="bottom" constant="8" id="9rg-Q7-QbF"/>
-                                    <constraint firstAttribute="trailing" secondItem="c01-GF-MXg" secondAttribute="trailing" constant="8" id="NW1-yC-n2L"/>
+                                    <constraint firstAttribute="bottom" secondItem="c01-GF-MXg" secondAttribute="bottom" id="9rg-Q7-QbF"/>
+                                    <constraint firstAttribute="trailing" secondItem="c01-GF-MXg" secondAttribute="trailing" id="NW1-yC-n2L"/>
                                     <constraint firstAttribute="trailing" secondItem="8cZ-pL-QpN" secondAttribute="trailing" id="Zjk-4l-E66"/>
                                     <constraint firstItem="8cZ-pL-QpN" firstAttribute="leading" secondItem="AvF-IL-hfr" secondAttribute="leading" id="gji-5z-Nkp"/>
-                                    <constraint firstItem="c01-GF-MXg" firstAttribute="leading" secondItem="AvF-IL-hfr" secondAttribute="leading" constant="8" id="ic3-gl-SGq"/>
+                                    <constraint firstItem="c01-GF-MXg" firstAttribute="leading" secondItem="AvF-IL-hfr" secondAttribute="leading" id="ic3-gl-SGq"/>
                                     <constraint firstAttribute="bottom" secondItem="8cZ-pL-QpN" secondAttribute="bottom" id="ppj-xv-It8"/>
                                 </constraints>
                             </view>
@@ -186,7 +187,7 @@
                             <constraint firstItem="Xcp-AY-8uc" firstAttribute="top" secondItem="AvF-IL-hfr" secondAttribute="bottom" constant="8" id="uHl-l5-u8D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RxT-YC-FYL"/>
+                    <navigationItem key="navigationItem" title="Chicken Tinder" id="RxT-YC-FYL"/>
                     <connections>
                         <outlet property="buttonLike" destination="JHM-ba-GII" id="TyX-6r-9LM"/>
                         <outlet property="buttonPass" destination="PHK-96-kwq" id="JJJ-MR-gF1"/>
