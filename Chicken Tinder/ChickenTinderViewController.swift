@@ -9,6 +9,10 @@ import UIKit
 
 class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionDelegate, CreateSessionDelegate {
     
+    // Data and state.
+    let apiSession = CTApiSession()
+    
+    // User interface outlets.
     @IBOutlet weak var imageRestaurant: UIImageView!
     @IBOutlet weak var labelRestaurantName: UILabel!
     @IBOutlet weak var labelRestaurantLocation: UILabel!
@@ -44,6 +48,7 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionD
         }
     }
     
+    // User interface actions.
     @IBAction func buttonPass_clicked(_ sender: Any) {
     }
     
