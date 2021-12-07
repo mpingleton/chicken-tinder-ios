@@ -140,22 +140,22 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-IL-hfr">
-                                <rect key="frame" x="20" y="88" width="388" height="746"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="746"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8cZ-pL-QpN">
-                                        <rect key="frame" x="0.0" y="8.3333333333333144" width="388" height="737.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.33333333333331439" width="428" height="745.66666666666663"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="c01-GF-MXg">
-                                        <rect key="frame" x="0.0" y="646" width="388" height="100"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c01-GF-MXg">
+                                        <rect key="frame" x="0.0" y="646" width="428" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-pY-cvj">
-                                                <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="50"/>
+                                                <rect key="frame" x="177.33333333333334" y="0.0" width="73.333333333333343" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPY-eb-3Ie">
-                                                <rect key="frame" x="0.0" y="50" width="65.333333333333329" height="50"/>
+                                                <rect key="frame" x="181.33333333333334" y="50" width="65.333333333333343" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -169,7 +169,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="8cZ-pL-QpN" firstAttribute="top" secondItem="AvF-IL-hfr" secondAttribute="top" constant="8" id="4o3-mx-NLX"/>
+                                    <constraint firstItem="8cZ-pL-QpN" firstAttribute="top" secondItem="AvF-IL-hfr" secondAttribute="top" id="4o3-mx-NLX"/>
                                     <constraint firstAttribute="bottom" secondItem="c01-GF-MXg" secondAttribute="bottom" id="9rg-Q7-QbF"/>
                                     <constraint firstAttribute="trailing" secondItem="c01-GF-MXg" secondAttribute="trailing" id="NW1-yC-n2L"/>
                                     <constraint firstAttribute="trailing" secondItem="8cZ-pL-QpN" secondAttribute="trailing" id="Zjk-4l-E66"/>
@@ -182,11 +182,11 @@
                         <viewLayoutGuide key="safeArea" id="DIp-0g-eIg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AvF-IL-hfr" firstAttribute="leading" secondItem="DIp-0g-eIg" secondAttribute="leading" constant="20" id="1jv-oY-rcl"/>
+                            <constraint firstItem="AvF-IL-hfr" firstAttribute="leading" secondItem="DIp-0g-eIg" secondAttribute="leading" id="1jv-oY-rcl"/>
                             <constraint firstItem="AvF-IL-hfr" firstAttribute="top" secondItem="DIp-0g-eIg" secondAttribute="top" id="4dt-2Y-4yC"/>
                             <constraint firstItem="DIp-0g-eIg" firstAttribute="trailing" secondItem="Xcp-AY-8uc" secondAttribute="trailing" constant="20" id="BV3-IW-nW1"/>
                             <constraint firstItem="Xcp-AY-8uc" firstAttribute="leading" secondItem="DIp-0g-eIg" secondAttribute="leading" constant="20" id="Nbj-Y7-nso"/>
-                            <constraint firstItem="DIp-0g-eIg" firstAttribute="trailing" secondItem="AvF-IL-hfr" secondAttribute="trailing" constant="20" id="XLC-jI-Q4m"/>
+                            <constraint firstItem="DIp-0g-eIg" firstAttribute="trailing" secondItem="AvF-IL-hfr" secondAttribute="trailing" id="XLC-jI-Q4m"/>
                             <constraint firstItem="Xcp-AY-8uc" firstAttribute="bottom" secondItem="DIp-0g-eIg" secondAttribute="bottom" id="fQ8-PK-5UW"/>
                             <constraint firstItem="Xcp-AY-8uc" firstAttribute="top" secondItem="AvF-IL-hfr" secondAttribute="bottom" constant="8" id="uHl-l5-u8D"/>
                         </constraints>
