@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2CDAEF275EF99F007CEA56 /* CTApiSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2CDAEE275EF99F007CEA56 /* CTApiSession.swift */; };
 		0B3A1C802728579700195BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C7F2728579700195BF5 /* AppDelegate.swift */; };
 		0B3A1C822728579700195BF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C812728579700195BF5 /* SceneDelegate.swift */; };
 		0B3A1C872728579700195BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3A1C852728579700195BF5 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2CDAEE275EF99F007CEA56 /* CTApiSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTApiSession.swift; sourceTree = "<group>"; };
 		0B3A1C7C2728579700195BF5 /* Chicken Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken Tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3A1C7F2728579700195BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B3A1C812728579700195BF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				0B9EF75D2734BB5F001C7EAA /* JoinSessionDelegate.swift */,
 				0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */,
 				0B9EF7612734BF90001C7EAA /* CreateSessionDelegate.swift */,
+				0B2CDAEE275EF99F007CEA56 /* CTApiSession.swift */,
 			);
 			path = "Chicken Tinder";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				0B3A1C9A27286D5600195BF5 /* JoinSessionViewController.swift in Sources */,
 				0B9EF7622734BF90001C7EAA /* CreateSessionDelegate.swift in Sources */,
 				0B3A1C822728579700195BF5 /* SceneDelegate.swift in Sources */,
+				0B2CDAEF275EF99F007CEA56 /* CTApiSession.swift in Sources */,
 				0B3A1C9827286D3F00195BF5 /* CreateSessionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
