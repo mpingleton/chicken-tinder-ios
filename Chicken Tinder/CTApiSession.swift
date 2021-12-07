@@ -35,7 +35,7 @@ class CTApiSession {
         
         let loginTask = URLSession.shared.dataTask(with: loginRequest) { data, response, error in
             if error != nil {
-                print("Error: \(error)")
+                print("Error: \(error!)")
                 return
             }
             
@@ -43,11 +43,11 @@ class CTApiSession {
             if statusCode == 200 {
                 // Successful log in.
                 let resJson = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.topLevelDictionaryAssumed) as! NSDictionary
-                print(resJson["accessToken"]!)
+                self.accessToken = resJson["accessToken"] as! String
             }
             else if statusCode == 403 {
                 // Incorrect username or passphrase.
-                
+                self.accessToken = ""
             }
         }
         loginTask.resume()
@@ -55,5 +55,31 @@ class CTApiSession {
     
     func logout() {
         
+        // Make sure we have an access token first.
+        if accessToken.isEmpty {
+            return
+        }
+        
+        // Send a logout request.
+        let logoutUrl = URL(string: "http://localhost:3001/api/auth/logout")!
+        var logoutRequest = URLRequest(url: logoutUrl)
+        logoutRequest.httpMethod = "POST"
+        logoutRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        logoutRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        let logoutTask = URLSession.shared.dataTask(with: logoutRequest) { data, response, error in
+            if error != nil {
+                print("Error: \(error!)")
+                return
+            }
+            
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            if statusCode == 200 {
+                // Successful log out.
+                // COME BACK: Clear all of the other state data.
+                self.accessToken = ""
+            }
+        }
+        logoutTask.resume()
     }
 }
