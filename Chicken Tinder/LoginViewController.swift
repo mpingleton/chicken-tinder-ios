@@ -12,6 +12,9 @@ class LoginViewController: UIViewController {
     // Delegates
     var delegate: LoginDelegate!
     
+    // API
+    var apiSession: CTApiSession!
+    
     // User interface outlets.
     @IBOutlet weak var inputUsername: UITextField!
     @IBOutlet weak var inputPassword: UITextField!

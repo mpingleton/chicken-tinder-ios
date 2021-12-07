@@ -12,6 +12,9 @@ class JoinSessionViewController: UIViewController {
     // Delegates
     var delegate: JoinSessionDelegate!
     
+    // API
+    var apiSession: CTApiSession!
+    
     // User interface outlets.
     @IBOutlet weak var inputSessionCode: UITextField!
     @IBOutlet weak var buttonJoin: UIButton!

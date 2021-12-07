@@ -12,6 +12,9 @@ class CreateSessionViewController: UIViewController {
     // Delegates.
     var delegate: CreateSessionDelegate!
     
+    // API
+    var apiSession: CTApiSession!
+    
     // User interface outlets.
     @IBOutlet weak var inputLatitude: UITextField!
     @IBOutlet weak var inputLongitude: UITextField!
