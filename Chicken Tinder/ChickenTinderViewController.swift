@@ -21,6 +21,10 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionD
     
     override func viewDidLoad() {
         
+        if apiSession.accessToken.isEmpty {
+            performSegue(withIdentifier: "segueToLogin", sender: self)
+        }
+        
         imageRestaurant.isHidden = true
         labelRestaurantName.text="Texas Roadhouse"
         labelRestaurantLocation.text="Shreveport, LA"
