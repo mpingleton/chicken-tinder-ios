@@ -23,10 +23,42 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var labelErrorMessage: UILabel!
     
     override func viewDidLoad() {
-        
+        inputUsername.text = ""
+        inputUsername.isEnabled = true
+        inputPassword.text = ""
+        inputPassword.isEnabled = true
+        buttonLogin.isEnabled = true
+        indicatorActivity.stopAnimating()
+        indicatorActivity.hidesWhenStopped = true
+        labelErrorMessage.text = ""
     }
     
+    // User interface actions.
     @IBAction func buttonLogin_clicked(_ sender: Any) {
+        
+        // Update the user interface
+        inputUsername.isEnabled = false
+        inputPassword.isEnabled = false
+        buttonLogin.isEnabled = false
+        buttonLogin.isHidden = true
+        indicatorActivity.startAnimating()
+        labelErrorMessage.text = ""
+        
+        // Send the login request.
+        apiSession.login(username: inputUsername.text!, passphrase: inputPassword.text!) { error in
+            if error != nil {
+                self.labelErrorMessage.text = "Incorrect username/password."
+            }
+            else {
+                self.labelErrorMessage.text = ""
+            }
+            
+            self.inputUsername.isEnabled = true
+            self.inputPassword.isEnabled = true
+            self.buttonLogin.isEnabled = true
+            self.buttonLogin.isHidden = false
+            self.indicatorActivity.stopAnimating()
+        }
     }
     
 }
