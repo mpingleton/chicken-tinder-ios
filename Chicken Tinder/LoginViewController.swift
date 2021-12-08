@@ -46,18 +46,20 @@ class LoginViewController: UIViewController {
         
         // Send the login request.
         apiSession.login(username: inputUsername.text!, passphrase: inputPassword.text!) { error in
-            if error != nil {
-                self.labelErrorMessage.text = "Incorrect username/password."
-            }
-            else {
-                self.labelErrorMessage.text = ""
-            }
-            
             self.inputUsername.isEnabled = true
             self.inputPassword.isEnabled = true
             self.buttonLogin.isEnabled = true
             self.buttonLogin.isHidden = false
             self.indicatorActivity.stopAnimating()
+            
+            if error != nil {
+                self.labelErrorMessage.text = "Incorrect username/password."
+            }
+            else {
+                self.labelErrorMessage.text = ""
+                self.delegate.successfulLogin()
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     

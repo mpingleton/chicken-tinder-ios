@@ -55,6 +55,10 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionD
         }
     }
     
+    func successfulLogin() {
+        print("Successful login")
+    }
+    
     // User interface actions.
     @IBAction func buttonPass_clicked(_ sender: Any) {
     }
