@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionDelegate, CreateSessionDelegate {
+class ChickenTinderViewController: UIViewController, LoginDelegate {
     
     // Data and state.
     let apiSession = CTApiSession()
