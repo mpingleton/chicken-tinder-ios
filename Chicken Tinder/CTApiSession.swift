@@ -23,7 +23,7 @@ class CTApiSession {
     
     var accessToken: String = ""
     
-    func login(username: String, passphrase: String) {
+    func login(username: String, passphrase: String, completionHandler: @escaping (_ error: Int?) -> Void) {
         
         // Send an http request and get the access token back.
         let authCredentials = try! JSONSerialization.data(withJSONObject: ["username": username, "passphrase": passphrase], options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -44,10 +44,16 @@ class CTApiSession {
                 // Successful log in.
                 let resJson = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.topLevelDictionaryAssumed) as! NSDictionary
                 self.accessToken = resJson["accessToken"] as! String
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
             }
             else if statusCode == 403 {
                 // Incorrect username or passphrase.
                 self.accessToken = ""
+                DispatchQueue.main.async {
+                    completionHandler(403)
+                }
             }
         }
         loginTask.resume()
