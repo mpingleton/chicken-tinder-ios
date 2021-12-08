@@ -8,101 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Session-->
-        <scene sceneID="36r-WP-4rV">
-            <objects>
-                <viewController title="Create Session" id="vTL-oj-jcQ" customClass="CreateSessionViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5aG-5q-i2R">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="QOu-oM-BmR">
-                                <rect key="frame" x="89" y="313" width="250" height="300"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ta7-sm-wip" userLabel="Location Input">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="190"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locaton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwX-sP-I7n">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="43.666666666666664"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u4X-o4-VLc">
-                                                <rect key="frame" x="0.0" y="48.666666666666686" width="250" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3TJ-16-ETP">
-                                                <rect key="frame" x="0.0" y="97.666666666666686" width="250" height="43.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjD-Ut-tb3">
-                                                <rect key="frame" x="0.0" y="146.33333333333331" width="250" height="43.666666666666657"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Set Location"/>
-                                                <connections>
-                                                    <action selector="buttonSetLocation_clicked:" destination="vTL-oj-jcQ" eventType="touchUpInside" id="2AE-sa-MaJ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tUW-W4-UYh">
-                                        <rect key="frame" x="0.0" y="240" width="250" height="60"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="K6a-sF-pSZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mf7-dr-zcy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drk-EJ-x4n">
-                                                        <rect key="frame" x="125" y="0.0" width="125" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-Fd-NlG">
-                                                <rect key="frame" x="-2" y="30" width="254" height="31"/>
-                                                <connections>
-                                                    <action selector="sliderDistance_changed:" destination="vTL-oj-jcQ" eventType="valueChanged" id="gZJ-b8-kRW"/>
-                                                </connections>
-                                            </slider>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="8up-fk-xGv"/>
-                                    <constraint firstAttribute="width" constant="250" id="UmL-b6-m0B"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="eTS-2e-jPf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="QOu-oM-BmR" firstAttribute="centerX" secondItem="5aG-5q-i2R" secondAttribute="centerX" id="PPY-I3-h7d"/>
-                            <constraint firstItem="QOu-oM-BmR" firstAttribute="centerY" secondItem="5aG-5q-i2R" secondAttribute="centerY" id="fDU-VZ-RJs"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Create Session" id="69i-QV-hSS"/>
-                    <connections>
-                        <outlet property="buttonSetLocation" destination="rjD-Ut-tb3" id="Urs-wk-Ity"/>
-                        <outlet property="inputLatitude" destination="u4X-o4-VLc" id="m5B-yc-IuR"/>
-                        <outlet property="inputLongitude" destination="3TJ-16-ETP" id="mqs-48-xP5"/>
-                        <outlet property="labelDistance" destination="Drk-EJ-x4n" id="NZI-7E-W8V"/>
-                        <outlet property="sliderDistance" destination="GaE-Fd-NlG" id="WkR-xL-tVb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LTY-9p-0Jl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1828.985507246377" y="306.69642857142856"/>
-        </scene>
         <!--Chicken Tinder-->
         <scene sceneID="gHZ-ss-c31">
             <objects>
@@ -200,8 +105,6 @@
                         <outlet property="imageRestaurant" destination="8cZ-pL-QpN" id="iLS-ji-cRw"/>
                         <outlet property="labelRestaurantLocation" destination="kPY-eb-3Ie" id="AsW-KY-IB2"/>
                         <outlet property="labelRestaurantName" destination="Hor-pY-cvj" id="cn6-2B-8Dy"/>
-                        <segue destination="LMe-Kb-Rwk" kind="show" identifier="segueToJoinSession" id="Bb0-20-CWz"/>
-                        <segue destination="vTL-oj-jcQ" kind="show" identifier="segueToCreateSession" id="zMc-Dz-Jpb"/>
                         <segue destination="db0-Sq-rAi" kind="show" identifier="segueToLogin" id="QbS-Jn-VfQ"/>
                     </connections>
                 </viewController>
@@ -296,76 +199,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNq-lw-AUC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="-5.3571428571428568"/>
-        </scene>
-        <!--Join Session-->
-        <scene sceneID="LUm-GT-Kgi">
-            <objects>
-                <viewController title="Join Session" id="LMe-Kb-Rwk" customClass="JoinSessionViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YOx-E0-ghc">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="foG-yr-MnR">
-                                <rect key="frame" x="89" y="363" width="250" height="200"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter session code:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYh-ZZ-CbA">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DvF-4o-m54">
-                                        <rect key="frame" x="0.0" y="50" width="250" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0UI-Yx-dQa">
-                                        <rect key="frame" x="0.0" y="100" width="250" height="50"/>
-                                        <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VnC-hf-pjQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
-                                            </activityIndicatorView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-5F-eep">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="50"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Join"/>
-                                                <connections>
-                                                    <action selector="buttonJoin_clicked:" destination="LMe-Kb-Rwk" eventType="touchUpInside" id="O0G-Au-DAh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message here." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJf-6L-Dkc">
-                                        <rect key="frame" x="0.0" y="150" width="250" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="3li-JQ-pEY"/>
-                                    <constraint firstAttribute="height" constant="200" id="LWF-P0-EVZ"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Zei-9T-8Y1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="foG-yr-MnR" firstAttribute="centerY" secondItem="YOx-E0-ghc" secondAttribute="centerY" id="4Mb-bH-ReK"/>
-                            <constraint firstItem="foG-yr-MnR" firstAttribute="centerX" secondItem="YOx-E0-ghc" secondAttribute="centerX" id="bIK-dx-lXm"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Join Session" id="t2S-U8-QxN"/>
-                    <connections>
-                        <outlet property="buttonJoin" destination="rc7-5F-eep" id="Npw-J7-oaH"/>
-                        <outlet property="indicatorActivity" destination="VnC-hf-pjQ" id="DFr-L7-MDm"/>
-                        <outlet property="inputSessionCode" destination="DvF-4o-m54" id="BBM-fy-a2c"/>
-                        <outlet property="labelErrorMessage" destination="LJf-6L-Dkc" id="y1l-K3-yHa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rzL-vs-RhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1829" y="-395"/>
         </scene>
     </scenes>
     <resources>

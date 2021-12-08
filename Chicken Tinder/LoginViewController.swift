@@ -57,8 +57,8 @@ class LoginViewController: UIViewController {
             }
             else {
                 self.labelErrorMessage.text = ""
+                self.navigationController?.popViewController(animated: false)
                 self.delegate.successfulLogin()
-                self.navigationController?.popViewController(animated: true)
             }
         }
     }

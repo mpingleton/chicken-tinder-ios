@@ -43,20 +43,9 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, JoinSessionD
             dest.delegate = self
             dest.apiSession = apiSession
         }
-        else if(segue.identifier == "segueToCreateSession") {
-            let dest = segue.destination as! CreateSessionViewController
-            dest.delegate = self
-            dest.apiSession = apiSession
-        }
-        else if(segue.identifier == "segueToJoinSession") {
-            let dest = segue.destination as! JoinSessionViewController
-            dest.delegate = self
-            dest.apiSession = apiSession
-        }
     }
     
     func successfulLogin() {
-        print("Successful login")
     }
     
     // User interface actions.
