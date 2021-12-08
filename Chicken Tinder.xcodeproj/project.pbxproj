@@ -16,6 +16,8 @@
 		0B3A1C9427286CFA00195BF5 /* ChickenTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9327286CFA00195BF5 /* ChickenTinderViewController.swift */; };
 		0B3A1C9627286D1500195BF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A1C9527286D1500195BF5 /* LoginViewController.swift */; };
 		0B9EF7602734BBF3001C7EAA /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */; };
+		0BA38CF327605ADE007F8956 /* MakeSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA38CF227605ADE007F8956 /* MakeSessionViewController.swift */; };
+		0BA38CF527605B16007F8956 /* MakeSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA38CF427605B16007F8956 /* MakeSessionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0B3A1C9327286CFA00195BF5 /* ChickenTinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenTinderViewController.swift; sourceTree = "<group>"; };
 		0B3A1C9527286D1500195BF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
+		0BA38CF227605ADE007F8956 /* MakeSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSessionViewController.swift; sourceTree = "<group>"; };
+		0BA38CF427605B16007F8956 /* MakeSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				0B3A1C9527286D1500195BF5 /* LoginViewController.swift */,
 				0B9EF75F2734BBF3001C7EAA /* LoginDelegate.swift */,
 				0B2CDAEE275EF99F007CEA56 /* CTApiSession.swift */,
+				0BA38CF227605ADE007F8956 /* MakeSessionViewController.swift */,
+				0BA38CF427605B16007F8956 /* MakeSessionDelegate.swift */,
 			);
 			path = "Chicken Tinder";
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA38CF327605ADE007F8956 /* MakeSessionViewController.swift in Sources */,
+				0BA38CF527605B16007F8956 /* MakeSessionDelegate.swift in Sources */,
 				0B3A1C9627286D1500195BF5 /* LoginViewController.swift in Sources */,
 				0B3A1C9427286CFA00195BF5 /* ChickenTinderViewController.swift in Sources */,
 				0B9EF7602734BBF3001C7EAA /* LoginDelegate.swift in Sources */,

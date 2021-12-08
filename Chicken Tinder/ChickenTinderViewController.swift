@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChickenTinderViewController: UIViewController, LoginDelegate {
+class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionDelegate {
     
     // Data and state.
     let apiSession = CTApiSession()
@@ -38,14 +38,20 @@ class ChickenTinderViewController: UIViewController, LoginDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "segueToLogin") {
+        if segue.identifier == "segueToLogin" {
             let dest = segue.destination as! LoginViewController
+            dest.delegate = self
+            dest.apiSession = apiSession
+        }
+        else if segue.identifier == "segueToMakeSession" {
+            let dest = segue.destination as! MakeSessionViewController
             dest.delegate = self
             dest.apiSession = apiSession
         }
     }
     
     func successfulLogin() {
+        performSegue(withIdentifier: "segueToMakeSession", sender: self)
     }
     
     // User interface actions.

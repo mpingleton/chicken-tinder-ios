@@ -8,6 +8,124 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Session-->
+        <scene sceneID="Vnh-I9-x3D">
+            <objects>
+                <viewController title="Session" id="Nsy-Bz-xmb" customClass="MakeSessionViewController" customModule="Chicken_Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pFq-dB-qiv">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHE-ug-jr7">
+                                <rect key="frame" x="64" y="388" width="300" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pNt-y4-Pf9" userLabel="Create Session">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7L-Ye-MHo">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="gMZ-Yu-pii"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-64-hhW">
+                                                <rect key="frame" x="0.0" y="50" width="300" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="eYX-rR-i1L"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Create"/>
+                                                <connections>
+                                                    <action selector="btnCreate_clicked:" destination="Nsy-Bz-xmb" eventType="touchUpInside" id="IJz-Ue-eCv"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-Al-Omw">
+                                                <rect key="frame" x="0.0" y="85" width="300" height="65"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w4B-Kh-reX" userLabel="Join Session">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Join Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eu9-MG-rHc">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hRo-L8-RyD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lk5-ye-wYk">
+                                                <rect key="frame" x="0.0" y="50" width="300" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="k6L-Nb-7O4"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Join"/>
+                                                <connections>
+                                                    <action selector="btnJoin_clicked:" destination="Nsy-Bz-xmb" eventType="touchUpInside" id="MDS-K3-Bp8"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbU-jh-Np4">
+                                                <rect key="frame" x="0.0" y="85" width="300" height="65"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="MOp-kK-zV9"/>
+                                    <constraint firstItem="w4B-Kh-reX" firstAttribute="top" secondItem="DHE-ug-jr7" secondAttribute="top" id="Ogd-i1-BGW"/>
+                                    <constraint firstAttribute="trailing" secondItem="pNt-y4-Pf9" secondAttribute="trailing" id="WGp-kN-oGa"/>
+                                    <constraint firstAttribute="trailing" secondItem="w4B-Kh-reX" secondAttribute="trailing" id="ZjZ-yq-hkF"/>
+                                    <constraint firstAttribute="bottom" secondItem="pNt-y4-Pf9" secondAttribute="bottom" id="ay7-VG-Fgm"/>
+                                    <constraint firstItem="pNt-y4-Pf9" firstAttribute="top" secondItem="DHE-ug-jr7" secondAttribute="top" id="dpM-ZU-zum"/>
+                                    <constraint firstItem="w4B-Kh-reX" firstAttribute="leading" secondItem="DHE-ug-jr7" secondAttribute="leading" id="iGY-y6-Ic9"/>
+                                    <constraint firstAttribute="bottom" secondItem="w4B-Kh-reX" secondAttribute="bottom" id="j7t-KR-Gho"/>
+                                    <constraint firstAttribute="height" constant="150" id="lJX-2W-qbO"/>
+                                    <constraint firstItem="pNt-y4-Pf9" firstAttribute="leading" secondItem="DHE-ug-jr7" secondAttribute="leading" id="tGQ-b3-Urd"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sGo-IG-duJ">
+                                <rect key="frame" x="64" y="350" width="300" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Q8k-6m-S7F"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Create"/>
+                                    <segment title="Join"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tabSelector_changed:" destination="Nsy-Bz-xmb" eventType="valueChanged" id="QsF-ng-IrG"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6HC-ah-p3l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DHE-ug-jr7" firstAttribute="trailing" secondItem="sGo-IG-duJ" secondAttribute="trailing" id="JQr-Kg-SZg"/>
+                            <constraint firstItem="DHE-ug-jr7" firstAttribute="leading" secondItem="sGo-IG-duJ" secondAttribute="leading" id="M3A-0h-DyG"/>
+                            <constraint firstItem="DHE-ug-jr7" firstAttribute="centerX" secondItem="pFq-dB-qiv" secondAttribute="centerX" id="Mho-fI-4vT"/>
+                            <constraint firstItem="DHE-ug-jr7" firstAttribute="top" secondItem="sGo-IG-duJ" secondAttribute="bottom" constant="8" id="cyJ-2i-qM8"/>
+                            <constraint firstItem="DHE-ug-jr7" firstAttribute="centerY" secondItem="pFq-dB-qiv" secondAttribute="centerY" id="swv-p9-OUo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Session" id="akW-Sm-dNK"/>
+                    <connections>
+                        <outlet property="inputJoinCode" destination="Eu9-MG-rHc" id="vbR-rH-Mbu"/>
+                        <outlet property="tabCreate" destination="pNt-y4-Pf9" id="0d0-k7-3eH"/>
+                        <outlet property="tabJoin" destination="w4B-Kh-reX" id="00J-6p-XVx"/>
+                        <outlet property="tabSelector" destination="sGo-IG-duJ" id="tYa-Rj-RPU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7E-W5-bBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="-57"/>
+        </scene>
         <!--Chicken Tinder-->
         <scene sceneID="gHZ-ss-c31">
             <objects>
@@ -106,6 +224,7 @@
                         <outlet property="labelRestaurantLocation" destination="kPY-eb-3Ie" id="AsW-KY-IB2"/>
                         <outlet property="labelRestaurantName" destination="Hor-pY-cvj" id="cn6-2B-8Dy"/>
                         <segue destination="db0-Sq-rAi" kind="show" identifier="segueToLogin" id="QbS-Jn-VfQ"/>
+                        <segue destination="Nsy-Bz-xmb" kind="show" identifier="segueToMakeSession" id="qqU-cD-gBH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTU-kb-ptm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
