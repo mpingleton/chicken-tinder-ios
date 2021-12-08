@@ -117,6 +117,7 @@
                     <navigationItem key="navigationItem" title="Session" id="akW-Sm-dNK"/>
                     <connections>
                         <outlet property="inputJoinCode" destination="Eu9-MG-rHc" id="vbR-rH-Mbu"/>
+                        <outlet property="inputLocation" destination="b7L-Ye-MHo" id="0hc-fv-YJi"/>
                         <outlet property="tabCreate" destination="pNt-y4-Pf9" id="0d0-k7-3eH"/>
                         <outlet property="tabJoin" destination="w4B-Kh-reX" id="00J-6p-XVx"/>
                         <outlet property="tabSelector" destination="sGo-IG-duJ" id="tYa-Rj-RPU"/>
