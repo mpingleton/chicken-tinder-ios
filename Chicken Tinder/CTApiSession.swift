@@ -48,11 +48,10 @@ class CTApiSession {
                     completionHandler(nil)
                 }
             }
-            else if statusCode == 403 {
-                // Incorrect username or passphrase.
+            else {
                 self.accessToken = ""
                 DispatchQueue.main.async {
-                    completionHandler(403)
+                    completionHandler(statusCode)
                 }
             }
         }
@@ -87,5 +86,80 @@ class CTApiSession {
             }
         }
         logoutTask.resume()
+    }
+    
+    func createSession(location: String, completionHandler: @escaping (_ joinCode: String?, _ error: Int?) -> Void) {
+        
+        // Make sure we have an access token first.
+        if accessToken.isEmpty {
+            return
+        }
+        
+        // Send a create session request.
+        let createSessionUrl = URL(string: "http://localhost:3001/api/session")!
+        var createSessionRequest = URLRequest(url: createSessionUrl)
+        createSessionRequest.httpMethod = "PUT"
+        createSessionRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        createSessionRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        createSessionRequest.httpBody = try! JSONSerialization.data(withJSONObject: ["location": location], options: JSONSerialization.WritingOptions.prettyPrinted)
+        
+        let createSessionTask = URLSession.shared.dataTask(with: createSessionRequest) { data, response, error in
+            if error != nil {
+                print("Error: \(error!)")
+                return
+            }
+            
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            if statusCode == 201 {
+                // Successfully created a session.
+                let responseData = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                DispatchQueue.main.async {
+                    completionHandler(((responseData as! NSDictionary)["joinCode"] as! String), nil)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completionHandler(nil, statusCode)
+                }
+            }
+        }
+        createSessionTask.resume()
+    }
+    
+    func joinSession(joinCode: String, completionHandler: @escaping (_ error: Int?) -> Void) {
+        
+        // Make sure we have an access token first.
+        if accessToken.isEmpty {
+            return
+        }
+        
+        // Send a join session request.
+        let joinSessionUrl = URL(string: "http://localhost:3001/api/session/join")!
+        var joinSessionRequest = URLRequest(url: joinSessionUrl)
+        joinSessionRequest.httpMethod = "POST"
+        joinSessionRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        joinSessionRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        joinSessionRequest.httpBody = try! JSONSerialization.data(withJSONObject: ["joinCode": joinCode], options: JSONSerialization.WritingOptions.prettyPrinted)
+        
+        let joinSessionTask = URLSession.shared.dataTask(with: joinSessionRequest) { data, response, error in
+            if error != nil {
+                print("Error: \(error!)")
+                return
+            }
+            
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            if statusCode == 200 {
+                // Successfully created a session.
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completionHandler(statusCode)
+                }
+            }
+        }
+        joinSessionTask.resume()
     }
 }
