@@ -43,7 +43,19 @@
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-Al-Omw">
                                                 <rect key="frame" x="0.0" y="85" width="300" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8n3-P3-dP0">
+                                                        <rect key="frame" x="150" y="32.666666666666686" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="8n3-P3-dP0" firstAttribute="centerY" secondItem="rLI-Al-Omw" secondAttribute="centerY" id="bqY-CN-6Xi"/>
+                                                    <constraint firstItem="8n3-P3-dP0" firstAttribute="centerX" secondItem="rLI-Al-Omw" secondAttribute="centerX" id="qbQ-MA-LIx"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -71,7 +83,19 @@
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbU-jh-Np4">
                                                 <rect key="frame" x="0.0" y="85" width="300" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-HO-jyD">
+                                                        <rect key="frame" x="150" y="32.666666666666686" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="g6S-HO-jyD" firstAttribute="centerX" secondItem="YbU-jh-Np4" secondAttribute="centerX" id="6vI-MF-RYU"/>
+                                                    <constraint firstItem="g6S-HO-jyD" firstAttribute="centerY" secondItem="YbU-jh-Np4" secondAttribute="centerY" id="OAl-eB-Fhg"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -118,6 +142,8 @@
                     <connections>
                         <outlet property="inputJoinCode" destination="Eu9-MG-rHc" id="vbR-rH-Mbu"/>
                         <outlet property="inputLocation" destination="b7L-Ye-MHo" id="0hc-fv-YJi"/>
+                        <outlet property="labelJoinCode" destination="8n3-P3-dP0" id="8kz-hs-TvZ"/>
+                        <outlet property="labelJoinError" destination="g6S-HO-jyD" id="k5r-nq-Ppr"/>
                         <outlet property="tabCreate" destination="pNt-y4-Pf9" id="0d0-k7-3eH"/>
                         <outlet property="tabJoin" destination="w4B-Kh-reX" id="00J-6p-XVx"/>
                         <outlet property="tabSelector" destination="sGo-IG-duJ" id="tYa-Rj-RPU"/>
