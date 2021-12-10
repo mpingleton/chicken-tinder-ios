@@ -22,6 +22,7 @@ import Foundation
 class CTApiSession {
     
     var accessToken: String = ""
+    var restaurantStack: [CTRestaurant] = []
     
     func login(username: String, passphrase: String, completionHandler: @escaping (_ error: Int?) -> Void) {
         
@@ -86,6 +87,56 @@ class CTApiSession {
             }
         }
         logoutTask.resume()
+    }
+    
+    func getAllRestaurants(completionHandler: @escaping (_ error: Int?) -> Void) {
+        
+        // Make sure we have an access token first.
+        if accessToken.isEmpty {
+            return
+        }
+        
+        // Clear the current stack.
+        restaurantStack.removeAll()
+        
+        // Send a request.
+        let getAllRestaurantsUrl = URL(string: "http://localhost:3001/api/restaurant")!
+        var getAllRestaurantsRequest = URLRequest(url: getAllRestaurantsUrl)
+        getAllRestaurantsRequest.httpMethod = "GET"
+        getAllRestaurantsRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        getAllRestaurantsRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        let getAllRestaurantsTask = URLSession.shared.dataTask(with: getAllRestaurantsRequest) { data, response, error in
+            if error != nil {
+                print("Error: \(error!)")
+                return
+            }
+            
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            if statusCode == 200 {
+                let responseData = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                
+                for restaurantObject in (responseData as! [NSDictionary]) {
+                    self.restaurantStack.append(
+                        CTRestaurant(
+                            withId: restaurantObject["id"] as! Int,
+                            withName: restaurantObject["name"] as! String,
+                            withLocation: restaurantObject["location"] as! String
+                        )
+                    )
+                }
+                
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completionHandler(statusCode)
+                }
+            }
+        }
+        getAllRestaurantsTask.resume()
     }
     
     func createSession(location: String, completionHandler: @escaping (_ joinCode: String?, _ error: Int?) -> Void) {
