@@ -52,6 +52,7 @@ class MakeSessionViewController: UIViewController {
             }
             else {
                 self.labelJoinCode.text = joinCode
+                self.delegate.sessionMade()
             }
         }
     }
@@ -60,6 +61,9 @@ class MakeSessionViewController: UIViewController {
         apiSession.joinSession(joinCode: inputJoinCode.text!) { error in
             if error != nil {
                 self.labelJoinError.text = String(error!)
+            }
+            else {
+                self.delegate.sessionMade()
             }
             
         }

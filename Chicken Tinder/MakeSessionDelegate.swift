@@ -6,5 +6,5 @@
 //
 
 protocol MakeSessionDelegate {
-    
+    func sessionMade()
 }

@@ -250,6 +250,8 @@
                         <outlet property="imageRestaurant" destination="8cZ-pL-QpN" id="iLS-ji-cRw"/>
                         <outlet property="labelRestaurantLocation" destination="kPY-eb-3Ie" id="AsW-KY-IB2"/>
                         <outlet property="labelRestaurantName" destination="Hor-pY-cvj" id="cn6-2B-8Dy"/>
+                        <outlet property="viewButtons" destination="Xcp-AY-8uc" id="5PF-nC-zuh"/>
+                        <outlet property="viewRestaurant" destination="AvF-IL-hfr" id="1x0-6I-Af4"/>
                         <segue destination="db0-Sq-rAi" kind="show" identifier="segueToLogin" id="QbS-Jn-VfQ"/>
                         <segue destination="Nsy-Bz-xmb" kind="show" identifier="segueToMakeSession" id="qqU-cD-gBH"/>
                     </connections>
