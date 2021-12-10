@@ -33,13 +33,6 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
         imageRestaurant.isHidden = true
         labelRestaurantName.text=""
         labelRestaurantLocation.text=""
-        
-        let imageUrl = URL(string: "https://cdn.vox-cdn.com/thumbor/Om_vzCuDw_nMBs6RDOlYdHfpApQ=/0x0:1000x439/1200x800/filters:focal(421x92:581x252)/cdn.vox-cdn.com/uploads/chorus_image/image/66890945/Texas_Roadhouse.0.jpg")!
-        if let data = try? Data(contentsOf: imageUrl) {
-            imageRestaurant.image = UIImage(data: data)
-            imageRestaurant.isHidden = false
-        }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,12 +50,6 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
     
     func successfulLogin() {
         performSegue(withIdentifier: "segueToMakeSession", sender: self)
-        apiSession.getAllRestaurants() { error in
-            if self.apiSession.restaurantStack.count > 0 {
-                self.labelRestaurantName.text = self.apiSession.restaurantStack.first?.name
-                self.labelRestaurantLocation.text = self.apiSession.restaurantStack.first?.location
-            }
-        }
     }
     
     func sessionMade() {
@@ -72,12 +59,15 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
                 self.viewButtons.isHidden = false
                 self.labelRestaurantName.text = self.apiSession.restaurantStack.first?.name
                 self.labelRestaurantLocation.text = self.apiSession.restaurantStack.first?.location
+                self.imageRestaurant.image = self.apiSession.restaurantStack.first?.images.first?.image
+                self.imageRestaurant.isHidden = false
             }
             else {
                 self.viewRestaurant.isHidden = true
                 self.viewButtons.isHidden = true
                 self.labelRestaurantName.text = ""
                 self.labelRestaurantLocation.text = ""
+                self.imageRestaurant.isHidden = true
             }
         }
     }
@@ -90,12 +80,15 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
             self.viewButtons.isHidden = false
             self.labelRestaurantName.text = self.apiSession.restaurantStack.first?.name
             self.labelRestaurantLocation.text = self.apiSession.restaurantStack.first?.location
+            self.imageRestaurant.image = self.apiSession.restaurantStack.first?.images.first?.image
+            self.imageRestaurant.isHidden = false
         }
         else {
             self.viewRestaurant.isHidden = true
             self.viewButtons.isHidden = true
             self.labelRestaurantName.text = ""
             self.labelRestaurantLocation.text = ""
+            self.imageRestaurant.isHidden = true
         }
     }
     
@@ -111,12 +104,15 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
             self.viewButtons.isHidden = false
             self.labelRestaurantName.text = self.apiSession.restaurantStack.first?.name
             self.labelRestaurantLocation.text = self.apiSession.restaurantStack.first?.location
+            self.imageRestaurant.image = self.apiSession.restaurantStack.first?.images.first?.image
+            self.imageRestaurant.isHidden = false
         }
         else {
             self.viewRestaurant.isHidden = true
             self.viewButtons.isHidden = true
             self.labelRestaurantName.text = ""
             self.labelRestaurantLocation.text = ""
+            self.imageRestaurant.isHidden = true
         }
     }
     

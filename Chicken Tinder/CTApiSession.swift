@@ -117,13 +117,18 @@ class CTApiSession {
                 let responseData = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
                 
                 for restaurantObject in (responseData as! [NSDictionary]) {
-                    self.restaurantStack.append(
-                        CTRestaurant(
-                            withId: restaurantObject["id"] as! Int,
-                            withName: restaurantObject["name"] as! String,
-                            withLocation: restaurantObject["location"] as! String
-                        )
+                    let tmpRestaurant = CTRestaurant(
+                        withId: restaurantObject["id"] as! Int,
+                        withName: restaurantObject["name"] as! String,
+                        withLocation: restaurantObject["location"] as! String
                     )
+                    
+                    let photoUrls = restaurantObject["photos"] as! [NSDictionary]
+                    for photoUrl in photoUrls {
+                        tmpRestaurant.images.append(CTRestaurantImage(withUrl: photoUrl["url"] as! String))
+                    }
+                    
+                    self.restaurantStack.append(tmpRestaurant)
                 }
                 
                 DispatchQueue.main.async {

@@ -10,6 +10,7 @@ class CTRestaurant {
     var id = 0
     var name = ""
     var location = ""
+    var images: [CTRestaurantImage] = []
     
     init() {}
     
