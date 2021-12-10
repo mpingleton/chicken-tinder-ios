@@ -100,6 +100,11 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
     }
     
     @IBAction func buttonLike_clicked(_ sender: Any) {
+        apiSession.enterLike(restaurantId: apiSession.restaurantStack.first!.id) { error in
+            if error != nil {
+                print("Error submitting like: \(error!)")
+            }
+        }
         apiSession.restaurantStack.removeFirst()
         if self.apiSession.restaurantStack.count > 0 {
             self.viewRestaurant.isHidden = false

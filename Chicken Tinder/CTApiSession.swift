@@ -213,4 +213,41 @@ class CTApiSession {
         }
         joinSessionTask.resume()
     }
+    
+    func enterLike(restaurantId: Int, completionHandler: @escaping (_ error: Int?) -> Void) {
+        
+        // Make sure we have an access token first.
+        if accessToken.isEmpty {
+            return
+        }
+        
+        // Send a request to submit the like.
+        let enterLikeUrl = URL(string: "http://localhost:3001/api/like")!
+        var enterLikeRequest = URLRequest(url: enterLikeUrl)
+        enterLikeRequest.httpMethod = "PUT"
+        enterLikeRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        enterLikeRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        enterLikeRequest.httpBody = try! JSONSerialization.data(withJSONObject: ["restaurantId": restaurantId], options: JSONSerialization.WritingOptions.prettyPrinted)
+        
+        let enterLikeTask = URLSession.shared.dataTask(with: enterLikeRequest) { data, response, error in
+            if error != nil {
+                print("Error: \(error!)")
+                return
+            }
+            
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            if statusCode == 200 {
+                // Successfully created a session.
+                DispatchQueue.main.async {
+                    completionHandler(nil)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completionHandler(statusCode)
+                }
+            }
+        }
+        enterLikeTask.resume()
+    }
 }
