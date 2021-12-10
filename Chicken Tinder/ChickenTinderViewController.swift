@@ -52,10 +52,19 @@ class ChickenTinderViewController: UIViewController, LoginDelegate, MakeSessionD
     
     func successfulLogin() {
         performSegue(withIdentifier: "segueToMakeSession", sender: self)
+        apiSession.getAllRestaurants() { error in
+            if self.apiSession.restaurantStack.count > 0 {
+                self.labelRestaurantName.text = self.apiSession.restaurantStack.first?.name
+                self.labelRestaurantLocation.text = self.apiSession.restaurantStack.first?.location
+            }
+        }
     }
     
     // User interface actions.
     @IBAction func buttonPass_clicked(_ sender: Any) {
+        apiSession.restaurantStack.removeFirst()
+        labelRestaurantName.text = apiSession.restaurantStack.first?.name
+        labelRestaurantLocation.text = apiSession.restaurantStack.first?.location
     }
     
     @IBAction func buttonLike_clicked(_ sender: Any) {
